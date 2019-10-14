@@ -16,11 +16,9 @@ class CitiesController < ApplicationController
   def view
     if params[:city].present? and City.all.has_key?(params[:city].to_sym)
       @city = params[:city]
-      @cities = []
-      @cities.push(City.all[@city.to_sym])
-    else
-      @cities = City.all.values()
+      City.all[@city.to_sym]
     end
+    @cities = City.all.values()
     render 'view'
   end
 

@@ -7,7 +7,7 @@
         <% temperature = ((9.0/5) * (@c.weather[:temperature] - 273) + 32).round %>
         <% description = @c.weather[:description] %>
         <ul>
-          <li> It's <%= temperature %>°F and it looks like <%= description %></li>
+          <li> The temperature is <%= temperature %>°F with <%= description %></li>
         </ul>
       <% end %>
       <strong>Cool Facts: </strong>
@@ -21,4 +21,4 @@
 <br>
 <%= link_to '<button type="button">Update an Existing City!</button>'.html_safe, cities_update_path%>
 <br>
-<%= link_to '<button type="button">Reset Cities</button>'.html_safe, cities_reset_path%>
+<%= link_to '<button type="button">Reset Cities!</button>'.html_safe, cities_reset_path%>
