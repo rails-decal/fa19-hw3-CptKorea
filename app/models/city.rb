@@ -30,7 +30,7 @@ class City
     end
   end
 
-  def delete(city)
-    $cities.delete(city.name)
+  def self.delete(city)
+    $cities.delete(city.name.to_sym)
   end
 end

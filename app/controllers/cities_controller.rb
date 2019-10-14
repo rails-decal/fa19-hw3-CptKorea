@@ -44,9 +44,10 @@ class CitiesController < ApplicationController
   end
 
   def delete
-    for city in cities
+    for city in City.all.values()
       City.delete(city)
     end
+    @cities = City.all.values()
     render 'view'
   end
 end
