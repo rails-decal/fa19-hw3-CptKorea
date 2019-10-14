@@ -1,1 +1,14 @@
 <!-- Your code here -->
+	<title>City Lights</title>
+  <% if not params[:name].nil?%>
+  <h1>Hello <%=params[:name] %></h1>
+  <% end %>
+  <% if params[:name].nil?%>
+  <h1>Hello, what is your name?</h1>
+    <%= form_with local: true, method: "get" do |f| %>
+      <%= f.text_field :name %>
+      <%= f.submit %>
+    <% end %> 
+  <% end %>
+  <h2>Click here to go to City Lights </h2>
+  <%= link_to '<button type="button">Create A New City!</button>'.html_safe, cities_view_path%>

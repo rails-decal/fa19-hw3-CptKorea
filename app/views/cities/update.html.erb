@@ -1,0 +1,13 @@
+<h3> Update an Existing City </h3>
+<%= form_tag cities_view_path do %>
+  <%= label_tag(name =:city, "City :") %>
+  <%= text_field_tag(name =:city, @city) %>
+  <br> 
+  <%= label_tag(name =:population, "Population :") %>
+  <%= number_field_tag(name =:population, value = @population) %>
+  <br> 
+  <%= label_tag(name =:landmark, "Landmark :") %>
+  <%= text_field_tag(name =:landmark, value = @landmark) %>
+  <br>
+  <%= submit_tag("Update City!") %>
+<% end %>

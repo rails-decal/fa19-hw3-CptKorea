@@ -1,0 +1,13 @@
+<h3> Fill in the deets of a city </h3>
+<%= form_tag cities_view_path do %>
+  <%= label_tag(name =:city, 'City Name:') %>
+  <%= text_field_tag(name =:city) %>
+  <br>
+  <%= label_tag(name =:population, 'Population:') %>
+  <%= number_field_tag(name =:population) %>
+  <br>
+  <%= label_tag(name =:landmark, 'Landmark:') %>
+  <%= text_field_tag(name =:landmark) %>
+  <br>
+  <%= submit_tag('Create the City!') %>
+<% end %>

@@ -1,0 +1,6 @@
+<h3> Confirm Reset </h3>
+<%= form_tag cities_view_path do %>
+  <%= submit_tag('Confirm Reset!') %>
+  <br>
+  <%= link_to '<button type="button">Click Here To Go Back</button>'.html_safe, cities_view_path%>
+<% end %>
